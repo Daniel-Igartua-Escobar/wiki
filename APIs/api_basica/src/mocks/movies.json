@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Alien",
+    "director": "pedro",
+    "year": 1995,
+    "rating": 9.9
+  },
+  {
+    "id": 2,
+    "title": "Alien2",
+    "director": "pedro",
+    "year": 1998,
+    "rating": 9.7
+  }
+]
