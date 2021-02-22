@@ -1,16 +1,47 @@
-# Estilos
+# CSS
+ES un lenguaje de hojas de estilo.
 
-## Dar estilos a etiquetas, clases e ids
+# Añadir estilos
+```html
+    <!-- Inline, en el atributo style de la etiqueta -->
+    <p style="color: red;"></p>
+
+    <!-- Interno -->
+    <style>
+      p {
+        background-color: yellow;
+      }
+    </style>
+
+    <!-- Externo, link a un archivo css -->
+    <link rel="stylesheet" href="style.css">
+
+
+```
+
+
+## Selectores
 ```css
+/* Etiqueta */
 h1 {
   color: black;
 }
+
+/* Clase */
 .my-clase {
   font-size: 14px;
 }
+
+/* Id */
 #miId {
   text-align: left;
 }
+
+/* Atributo */
+img[src] 
+
+/* Pseudoclase */
+
 ```
 
 ```css

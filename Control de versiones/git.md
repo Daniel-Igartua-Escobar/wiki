@@ -124,3 +124,18 @@ Ejemplo: feat(archivo_modificado): add, change, ..... [numero_tarjeta_jira]
 - git push origin `rama`
 - git merge `rama`
 - git branch -d master (eliminar rama local)
+
+
+
+git init
+
+git add .
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
+
+git push -u origin master
+
+
+https://seguro.marca.sta.internet.int/registro/release/v3/?view=recoverPassword&token=33383837efbfbdefbfbdefbfbd791d0d10775e61efbfbd70efbfbd61efbfbd&codSite=2&old=false&url_redirect=&emailUser=suerte17@mailinator.com

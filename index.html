@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const checkLocalStorage = () => {
+    if (window.localStorage) {
+        return true
+    } else {
+        console.warn('window.localStorage is undefinded')
+    }
+}
+
+/**
+ * Private function to set LocalStorage
+ * @param {string} key
+ * @param {string} value
+ */
+const setLocalStorage = (key, value) => {
+    if (typeof value === 'undefined') {
+        value = ''
+    }
+    if (window.localStorage) {
+        window.localStorage.setItem(key, value);
+    } else {
+        console.warn('window.localStorage is undefinded')
+    }
+};
+
+/**
+ * Private function to get LocalStorage
+ * @param {string} key
+ */
+const getLocalStorage = key => {
+    if (checkLocalStorage()) {
+        return window.localStorage.getItem(key);
+    }
+};
+
+    </script>
+</body>
+</html>
