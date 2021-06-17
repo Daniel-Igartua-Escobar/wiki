@@ -20,4 +20,8 @@
 
 * cuando ponemos un comando seguido de una letra -l y una palabra --version
 
+- Actualizar consola 
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
 
