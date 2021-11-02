@@ -41,8 +41,21 @@ REGION=PE npm run build && npm run dev
 
 # PRs a catálogo
 - Hacer fork del repo bbva-web-components
+- Crear feature
+- Crear tarjeta de Jira con las etiquetas correspondientes y poner a ready to verify
+
+Ejemplo, tarjeta Jira para PR.
+<img src="./images/tarjeta_jira_PR_catalogo.png" width="250" height="200">
+
+https://globaldevtools.bbva.com/jira/browse/GEAFEC-4689
+
+Añadir las etiquetas y hacer commit con la etiqueta correspondiente.
+
 - Hacer un solo commit, ej:
 feat(bbva-list-movement): show amount when it is zero [GEAFEC-4326]
+feat(bbva-data-visualization-area): add show all dates without repeating, bottom line when all values ​​are zero and hide marker [GEAFEC-4689]
+
+- Lanzar PR de nuestra feature de nuestro repo a su repo.
 
 # Rebase
 git rebase -i HEAD~2
@@ -75,6 +88,9 @@ npm i -g gema-cli
 - generar changelog
 gema convention:version
 
+chore: updates bbva-gema-products-card-dashboard
+build(release): 1.9.3
+
 # Commits
 
 - errores
@@ -85,4 +101,38 @@ feat:
 feat: 
         BREAKING CHANGE
 
+# Rama 
+- master
 
+hotfix
+
+# PRs
+mireia.guinovart.contractor@bbva.com
+
+# Borrar componentes App
+
+rm -rf components node_modules package-lock.json
+bower cache clean
+
+npm i
+bower i
+
+npm run pe:test:start
+
+# Añadir locales App
+
+gema template:compat:literals-i18n-and-intl
+
+
+
+# Ticket de glomo
+
+Type: Dependency
+Petitioner Team: vuestro equipo
+Receptor Team : Global - GLOBAL GloMo Core
+Labels: ServiceDesk soporte
+Description: Comentarnos el problema o duda que tenéis, la rama en la que estáis trabajando y algún ejemplo concreto.
+
+# Lanzar canal Cells
+
+$core[0].publish('card_product_retry_get_transactions', detail);
