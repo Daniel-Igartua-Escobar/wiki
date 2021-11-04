@@ -59,3 +59,32 @@ Sobrescribe el eventp y lanza otro
 # IMAGENES
 
 - Coger de microilustraciones(componente de catálogo)
+
+
+
+
+
+
+
+
+# Apuntes
+
+- Documentación: https://docs.google.com/document/d/1RDFuUUUUP3oPrG3gZGX8cvbMDC09KlmPTXh-SbyiTvU/edit#
+
+- Instalar ultimas versiones de node, cells y ufe cli
+# Para lanzar la App y que funcionen las SF añadir -b
+
+- cells app:serve -c PE/test.json -b
+
+# Soluciones en  la App
+
+- Carpeta elements portalizacion
+
+# Modificar SF
+
+- Descargar repo de SF, sacar rama feature, hacer cambios, rm -rf dist, ufe build
+
+# Probar solucion local en App
+
+- Lanzar comando ufe add ruta_local_SF
+ej: ufe add ../bbva-btge-bussiness-account
