@@ -88,3 +88,8 @@ Sobrescribe el eventp y lanza otro
 
 - Lanzar comando ufe add ruta_local_SF
 ej: ufe add ../bbva-btge-bussiness-account
+
+- Borrar antes de volver a ahcer otro add
+
+git reset --hard
+git clean -df

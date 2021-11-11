@@ -80,11 +80,6 @@ git commit -m "" --no-verify
 - crear rama y modificar packgar, bower y changelog
 version/tag-1.5.0
 
-
-# Gema cli
-- instalar
-npm i -g gema-cli
-
 - generar changelog
 gema convention:version
 
@@ -136,3 +131,27 @@ Description: Comentarnos el problema o duda que tenéis, la rama en la que está
 # Lanzar canal Cells
 
 $core[0].publish('card_product_retry_get_transactions', detail);
+
+
+# Config Android
+
+app.config.json 
+{
+  "use": "peru",
+  "environments": [
+    {
+      "id": "peru",
+      "web": {
+        "gema": "https://bbva-cells-files.s3.amazonaws.com/cells/apps/bbva_global_gema_app/gema-pe/master/cellsapp/PE/test.android/vulcanize/index.html",
+        "glomo": "https://appassets.androidplatform.net/assets/www/index.html"
+      }
+    }
+  ]
+}
+
+
+"gema": "https://appassets.androidplatform.net/assets/www2/index.html",
+
+# Gema cli
+- instalar
+npm i -g gema-cli
