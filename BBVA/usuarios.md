@@ -71,3 +71,18 @@ Cuentas:10,Tarjetas:4,Depositos:0,Prestamos:8,Seguros:0,Inversiones:2
 user: L44496812
 password, bbva01  
 Cuentas:8,Tarjetas:5,Depositos:0,Prestamos:0,Seguros:0,Inversiones:0
+
+
+
+- Modal Apertura de cuenta en t- cambio
+
+user: L46635802
+password, bbva01  
+
+46635802/bbva01
+46635760/bbva01
+
+- Indicadores TPVs
+
+| 10202001  | bbva01    |
+

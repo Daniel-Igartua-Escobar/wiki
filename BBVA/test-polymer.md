@@ -77,3 +77,28 @@
         el._openSeeAllModal();
       });
 ```
+
+## Comprobar elemento activo, con foco
+```js
+
+      test('calls init, The input should not have focus when the autofocus property is set to false', ()=> {
+        const cleanData = sinon.stub(el, 'cleanData');
+        el.autofocus = false;
+        el.init();
+        const currentActiveElement = document.activeElement?.shadowRoot?.activeElement;
+        assert.equal(currentActiveElement, undefined);
+        assert.isTrue(cleanData.called);
+        cleanData.restore()
+      })
+
+      test('calls init, The input should have focus when the autofocus property is set to true', () => {
+        const cleanData = sinon.stub(el, 'cleanData');
+        el.autofocus = true;
+        const myAccount = el.shadowRoot.querySelector('#myAccount');
+        el.init();
+        const currentActiveElement = document.activeElement.shadowRoot.activeElement;
+        assert.equal(currentActiveElement, myAccount);
+        assert.isTrue(cleanData.called);
+        cleanData.restore();
+      })
+```

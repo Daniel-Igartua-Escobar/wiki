@@ -72,6 +72,7 @@ Sobrescribe el eventp y lanza otro
 - Documentación: https://docs.google.com/document/d/1RDFuUUUUP3oPrG3gZGX8cvbMDC09KlmPTXh-SbyiTvU/edit#
 
 - Instalar ultimas versiones de node, cells y ufe cli
+npm i -g @btge/ufe-cli@0.17.0-alpha.6
 # Para lanzar la App y que funcionen las SF añadir -b
 
 - cells app:serve -c PE/test.json -b
@@ -89,7 +90,7 @@ Sobrescribe el eventp y lanza otro
 - Lanzar comando ufe add ruta_local_SF
 ej: ufe add ../bbva-btge-bussiness-account
 
-- Borrar antes de volver a ahcer otro add
+- Borrar antes de volver a hacer otro add
 
 git reset --hard
 git clean -df

@@ -130,12 +130,15 @@ Description: Comentarnos el problema o duda que tenéis, la rama en la que está
 
 # Lanzar canal Cells
 
+```zsh
 $core[0].publish('card_product_retry_get_transactions', detail);
-
-
+```
 # Config Android
 
 app.config.json 
+
+```json
+
 {
   "use": "peru",
   "environments": [
@@ -152,6 +155,18 @@ app.config.json
 
 "gema": "https://appassets.androidplatform.net/assets/www2/index.html",
 
+```
+
+
 # Gema cli
 - instalar
 npm i -g gema-cli
+
+# Merge Master to develop
+
+Sacar rama de develop y mergear con Master, PR a develop
+
+
+# BTGE comunicar con nativo
+
+npm i -g @btge/ufe-cli@0.17.0-alpha.6
