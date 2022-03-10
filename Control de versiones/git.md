@@ -139,3 +139,7 @@ git push -u origin master
 
 
 https://seguro.marca.sta.internet.int/registro/release/v3/?view=recoverPassword&token=33383837efbfbdefbfbdefbfbd791d0d10775e61efbfbd70efbfbd61efbfbd&codSite=2&old=false&url_redirect=&emailUser=suerte17@mailinator.com
+
+
+sacar rama a partir de un tag
+git checkout -b prueba 1.0.0 

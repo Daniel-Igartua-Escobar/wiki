@@ -133,6 +133,17 @@ Description: Comentarnos el problema o duda que tenéis, la rama en la que está
 ```zsh
 $core[0].publish('card_product_retry_get_transactions', detail);
 ```
+
+# Lanzar canal Cells nativo
+
+```zsh
+var params = { dateFormat:'yyyy-MM-dd'}
+
+params.defaultDate = '2022-01-01'
+"2022-01-01"
+window.CellsNativePlugins.pluginManager.execute(console.log, console.log, 'DatePicker', 'get', params);
+```
+
 # Config Android
 
 app.config.json 
@@ -162,6 +173,8 @@ app.config.json
 - instalar
 npm i -g gema-cli
 
+https://globaldevtools.bbva.com/bitbucket/projects/BBVA_GLOBAL_GEMA_APP/repos/gema_cli/browse
+
 # Merge Master to develop
 
 Sacar rama de develop y mergear con Master, PR a develop
@@ -170,3 +183,16 @@ Sacar rama de develop y mergear con Master, PR a develop
 # BTGE comunicar con nativo
 
 npm i -g @btge/ufe-cli@0.17.0-alpha.6
+
+
+
+# Añadir indicadores
+https://globaldevtools.bbva.com/bitbucket/projects/BBVA_GLOBAL_GEMA_APP/repos/gema-pe/pull-requests?create&targetBranch=refs%2Fheads%2Fdevelop&sourceBranch=refs%2Fheads%2Ffeature%2Fremove-indicators&targetRepoId=151293#app/composerMocksTpl/dashboard.js
+
+bbva-gema-dashboard, añadir porpiedades:
+  combineCards: ['STORES', 'STORE'],
+  isArrayBbvaLink: true,
+
+cells-gema-stores-dm, añadir propiedad:
+
+  showIndicators: true

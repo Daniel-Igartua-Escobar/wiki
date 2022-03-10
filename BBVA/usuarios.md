@@ -9,11 +9,13 @@
 | 72943031  | bbva01    |                     |
 | 10202002  | bbva01    | TPVs                |
 | 10202001  | bbva01    | TPVs                |
-| 45385366  | bbva2729  | Prestamo de negocio |
+| 45385366  | bbva2729  | Prestamo de negocio, Calidad|
 | 42734934  | knot1984  | Produccion, prestamos |
 | 71445968  | 010194ajm  | Produccion, tarjetas |
 
+45385366/bbva2729
 
+----------------
 73592350  bbva01
 45385366 bbva2729
 
@@ -85,4 +87,40 @@ password, bbva01
 - Indicadores TPVs
 
 | 10202001  | bbva01    |
+
+
+    bbva-help-modal.full-background-navy bbva-panel-offer .list-bullet-items {
+    margin-top: calc(((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem);
+}
+
+
+window.CellsNativePlugins.pluginManager.execute(console.log, console.log, 'DatePicker', 'get', params);
+window.CellsNativePlugins.pluginManager.execute(successCallback, errorCallback, 'DatePicker', 'get');
+window.CellsNativePlugins.pluginManager.execute(console.log, console.log, 'DatePicker', 'get', params);
+
+
+
+
+
+
+
+
+
+    "consumerID": "13000079",
+
+    Cambiar a:
+
+    "consumerID": "13000013",
+
+    Usuario: 
+    10202080
+    bbva01
+
+    08439417
+
+
+10202004
+bbva01
+
+
 
