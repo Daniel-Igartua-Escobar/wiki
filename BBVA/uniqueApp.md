@@ -2,10 +2,19 @@
 
 ## Ramas
 
-feature/uniqueApp
-gema-ios-global ---> https://globaldevtools.bbva.com/bitbucket/projects/BBVA_GLOBAL_GEMA_APP/repos/gema-ios-global.apppack/browse?at=refs%2Fheads%2Fdemo_peru
-gema-android-global --> https://globaldevtools.bbva.com/bitbucket/projects/BBVA_GLOBAL_GEMA_APP/repos/gema-android-global.apppack/browse?at=refs%2Fheads%2Fdemo_peru
+Android: feature/multi_country_support
+iOS: multi_country_support
 
 ## Usuarios
 
+test
+
 00008007 / ADMIN002 / DD112233
+
+QA
+
+01062246 / ADMIN001 / AA112233
+
+01062250 / ADMIN001 / AA112233
+
+01062290
