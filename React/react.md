@@ -242,6 +242,16 @@ return (
 )
 ```
 
+o
+
+```js
+return (
+  <>
+    <TodoList />
+    <input />
+  </>
+)
+```
 
 
 
