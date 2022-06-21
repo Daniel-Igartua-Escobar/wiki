@@ -10,6 +10,9 @@ Modificar region
 echo $REGION
 export REGION=CO
 
+## HEROKU
+Cambiar pais
+https://pole-test.herokuapp.com/region?region=CO
 
 ## APP WEB
 Repo: gema-co
@@ -39,3 +42,19 @@ https://localhost:7050/region?region=CO
 
 ## EJEMPLOS
 feature/pending-operations
+
+## CODIGO IMPUTAR BBVA
+17588
+
+## GRUPO COLOMBIA
+BBVA_CO_GEMA_DEVELOPERS
+
+## USUARIOS
+00101265 JOAN0001 pibee002
+00101265 MENUR009 pibee003
+
+# NPM LINK
+Monorepo, enlazar componente:
+  Hacer `npm link` en la consola en el repo en el componente.
+  Hacer `npm link nombre_componente` en la App.
+  Cuando terminemos hacer `npm unlink`.

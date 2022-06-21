@@ -183,6 +183,7 @@ Sacar rama de develop y mergear con Master, PR a develop
 # BTGE comunicar con nativo
 
 npm i -g @btge/ufe-cli@0.17.0-alpha.6
+npm install -g @btge/ufe-cli@latest
 
 
 
