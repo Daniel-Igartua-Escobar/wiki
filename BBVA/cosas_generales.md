@@ -196,3 +196,19 @@ bbva-gema-dashboard, añadir porpiedades:
 cells-gema-stores-dm, añadir propiedad:
 
   showIndicators: true
+
+# Canal a nativo
+
+```js
+  $core[0].publish('ch_native_c_user_data', _userData, {forwardToNative: true})
+```
+
+# Borrar datos de FIDO
+
+```js
+  var _userData = await gemaStorage.secureLocalStorage.getRememberedUserData();
+  delete _userData.fido
+  await gemaStorage.secureLocalStorage.setRememberedUserData(_userData);
+
+  $core[0].publish('ch_native_c_user_data', _userData, {forwardToNative: true})
+```
