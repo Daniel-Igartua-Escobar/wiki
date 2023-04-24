@@ -212,3 +212,10 @@ cells-gema-stores-dm, añadir propiedad:
 
   $core[0].publish('ch_native_c_user_data', _userData, {forwardToNative: true})
 ```
+
+# WIFI BBVA
+XE780891
+sj0rldqa
+
+# COMMIT
+fix(BbvaGemaFidoManager): reset token [GEAFEC-7478]

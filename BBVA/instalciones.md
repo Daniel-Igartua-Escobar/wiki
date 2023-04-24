@@ -72,3 +72,40 @@
 
  Instalar [cells](https://platform.bbva.com/codelabs/cells/Cells%20Codelabs#/cells/Prepare%20your%20Cells%20Environment/Installing%20Node.js/)
 
+## Obtener datos del usuario y setearlos
+
+```js
+    async _getUserData() {
+      const userData = await gemaStorage.secureLocalStorage.getRememberedUserData();
+      return userData;
+    }
+
+    async _setUserData(attribute, value) {
+      const userData = await gemaStorage.secureLocalStorage.getRememberedUserData();
+      userData[attribute] = value;
+      await gemaStorage.secureLocalStorage.setRememberedUserData(userData);
+      this._customDispatch('native-user-data', userData);
+    }
+
+    await this._setUserData('postLoginEnrollment', postLoginEnrollment);
+
+    test('_setUserData method', async() => {
+        const getRememberedUserDataStub = sinon.stub(gemaStorage.secureLocalStorage, 'getRememberedUserData').returns({ userId: '01234', reference: 'prueba1' });
+        const setRememberedUserDataStub = sinon.stub(gemaStorage.secureLocalStorage, 'setRememberedUserData');
+        const _customDispatchStub = sinon.stub(el, '_customDispatch');
+
+        await el._setUserData('postLoginEnrollment', { toastIter: 1 });
+
+        assert.isTrue(getRememberedUserDataStub.called);
+        assert.isTrue(setRememberedUserDataStub.called);
+        assert.isTrue(_customDispatchStub.calledWith('native-user-data', {
+            userId: '01234',
+            reference: 'prueba1',
+            postLoginEnrollment: { toastIter: 1 }
+        }));
+
+        _customDispatchStub.restore();
+        getRememberedUserDataStub.restore();
+        setRememberedUserDataStub.restore();
+    });
+```
