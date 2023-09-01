@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Números 7</title>
+</head>
+<body>
+  <p id="demo">Holis</p>
+
+<script>
+  function ordenarNumArray(numArray) {
+    for (let i = 0; i < numArray.length; i++) {
+      for (let j = i + 1; j < numArray.length; j++) {
+        if (numArray[i] > numArray[j]) {
+
+          let tmp = numArray[i];
+          numArray[i] = numArray[j];
+
+          numArray[j] = tmp;
+        }
+      }
+    }
+
+    return numArray;
+  }
+
+  var num1 = parseFloat(prompt("Introduce el primer número"));
+  var num2 = parseFloat(prompt("Introduce el segundo número"));
+  var num3 = parseFloat(prompt("Introduce el tercer número"));
+
+  numArray = [num1, num2, num3];
+
+  numArray = ordenarNumArray(numArray);
+
+  if (numArray[0] === numArray[1] || numArray[2] === numArray[1]) {
+    document.getElementById("demo").innerHTML = "No hay elemento central.";
+  }
+  else {
+    document.getElementById("demo").innerHTML = numArray[1] + " es el número central.";
+  }
+</script>
+</body>
+</html>

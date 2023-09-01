@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="Ejercicio3.css">
+</head>
+<body>
+
+    <h1>Mi Hotel</h1>
+
+    <form action="mailto:reservas@mihotel.com" method="get" enctype="text/plain">
+
+        <div class="">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="usuario_nombre" required autofocus>
+        </div>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="usuario_apellidos" required>
+        <br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" name="usuario_telefono" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="usuario_email" required>
+        <br>
+
+        <label for="noches">Número de noches:</label>
+        <input type="number" id="noches" name="usuario_noches" required>
+        <br>
+
+        <label for="entrada">Fecha de entrada:</label>
+        <input type="date" id="entrada" name="usuario_entrada" required>
+        <br>
+
+        <label for="salida">Fecha de salida:</label>
+        <input type="date" id="salida" name="usuario_salida" required>
+        <br>
+
+        <fieldset>
+            <legend>Elige el tipo de habitación:</legend>
+            <div>
+                <input type="radio" id="simple" name="usuario_habitacion" value="simple">
+                <label for="simple">simple</label>
+            </div>
+            <div>
+                <input type="radio" id="doble" name="usuario_habitacion" value="doble" checked>
+                <label for="doble">doble</label>
+            </div>
+            <div>
+                <input type="radio" id="matrimonio" name="usuario_habitacion" value="matrimonio">
+                <label for="matrimonio">matrimonio</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Extras:</legend>
+            <div>
+                <input type="checkbox" id="desayuno" name="usuario_desayuno" value="desayuno" checked>
+                <label for="desayuno">Desayuno</label>
+            </div>
+            <div>
+                <input type="checkbox" id="comida" name="usuario_comida" value="comida">
+                <label for="comida">Comida</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cena" name="usuario_cena" value="cena">
+                <label for="cena">Cena</label>
+            </div>
+            <div>
+                <input type="checkbox" id="nevera" name="usuario_nevera" value="nevera">
+                <label for="nevera">Nevera</label>
+            </div>
+            <div>
+                <input type="checkbox" id="supletoria" name="usuario_supletoria" value="supletoria">
+                <label for="supletoria">Cama supletoria</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="cama">Elige el tipo de cama:</label>
+            <br>
+            <select name="usuario_cama" id="">
+                <option value="individual">Individual</option>
+                <option value="doble">Doble</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="comentarios">Comentarios:</label>
+            <br>
+            <textarea id="comentarios" name="usuario_comentarios"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Reiniciar"> 
+        </div>
+    </form>
+</body>
+</html>

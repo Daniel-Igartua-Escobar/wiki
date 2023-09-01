@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE juegos [
+  <!ELEMENT juego (nombre, autor, empresa, descripción, plataformas)>
+  <!ELEMENT letra (#PCDATA)>
+]>
+
+<!ELEMENT pedidos (pedido+)>
+<!ELEMENT pedido (datos_pedido, datos_ordenante, articulos) >
+<!ATTLIST pedido codigo ID #REQUIRED>
+<!ATTLIST pedido tipo (Normal|Urgente) #REQUIRED >
+<!ELEMENT datos_pedido ( trabajador,fecha, revision, observaciones?)>
+<!ELEMENT trabajador (#PCDATA)>
+<!ATTLIST trabajador dni CDATA #REQUIRED>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT revision (#PCDATA)>
+<!ELEMENT observaciones (#PCDATA)>
+<!ELEMENT datos_ordenante (dir_albaran, dir_entrega?)>
+<!ELEMENT dir_albaran (dir, localidad, cp, provincia)>
+<!ELEMENT dir_entrega (dir, localidad, cp, provincia)>
+<!ELEMENT dir (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT articulos (articulo+)>
+<!ELEMENT articulo (codigo, unidades, precio_unidad, iva, obs_articulo?)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT unidades (#PCDATA)>
+<!ELEMENT precio_unidad (#PCDATA)>
+<!ELEMENT iva (#PCDATA)>
+<!ELEMENT obs_articulo (#PCDATA)>

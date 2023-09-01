@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var peso = parseInt(prompt("Introduce el peso del usuario"));
+        var estatura = parseInt(prompt("Introduce la estatura del usuario"));
+        estatura = estatura/100;
+
+        var imc = peso/(Math.pow(estatura,2));
+
+        if (imc >= 17 && imc <= 20 )
+        {
+            document.write("Su imc: " + imc + " .Peso bajo");
+        }
+        else if(imc > 20 && imc <= 25)
+        {
+            document.write("Su imc: " + imc + " .Peso ideal");
+        }
+        else if(imc > 25 && imc <= 30)
+        {
+            docuemnt.write("Su imc: " + imc + " .Sobrepeso");
+        }
+        else{}
+        
+
+    </script>
+</body>
+</html>

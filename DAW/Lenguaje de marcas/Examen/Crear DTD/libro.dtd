@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT BIBLIOTECA (LIBRO+)>
+    <!ELEMENT LIBRO (TITULO, AUTOR*, ANYO?, EDITORIAL?)>
+    <!ATTLIST LIBRO COD CDATA #REQUIRED>
+    <!ELEMENT AUTOR (#PCDATA)>
+    <!ELEMENT TITULO (#PCDATA)>
+    <!ELEMENT EDITORIAL (#PCDATA)>
+    <!ELEMENT ANYO (#PCDATA)>
+]>
+
+//Elemento
+
+<BIBLIOTECA>
+ <LIBRO COD="1">
+    <TITULO>XML para todos</TITULO>
+    <AUTOR>Sergio Lujan Mora</AUTOR>
+    <ANYO>2001</ANYO>
+    <EDITORIAL>UA Prensa</EDITORIAL>
+ </LIBRO>
+ <LIBRO COD="11">
+    <TITULO>Como aprobar una oposición</TITULO>
+    <AUTOR>Marisa Zayas Fornieles</AUTOR>
+    <AUTOR>Sergio Lujan Mora</AUTOR>
+    <ANYO>1999</ANYO>
+    <EDITORIAL>Prensa Editorial</EDITORIAL>
+ </LIBRO>
+</BIBLIOTECA>

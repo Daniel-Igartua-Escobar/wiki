@@ -219,3 +219,6 @@ sj0rldqa
 
 # COMMIT
 fix(BbvaGemaFidoManager): reset token [GEAFEC-7478]
+
+# Mergear 2 repositorios distintos
+git merge gema-co/develop --allow-unrelated-histories

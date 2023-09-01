@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Cadenas de caracteres 23</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Talla
+    <select name="talla" id="talla">
+      <option value="XXL">XXL</option>
+      <option value="XL">XL</option>
+      <option value="L">L</option>
+      <option value="M">M</option>
+      <option value="S">S</option>
+      <option value="XS">XS</option>
+    </select>
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function tipoTalla(talla) {
+    let tipoTallaTexto;
+
+    if (talla === "XXL" || talla === "XL" || talla === "L") {
+      tipoTallaTexto = "Grande";
+    }
+    else if (talla === "M") {
+      tipoTallaTexto = "Mediana";
+    }
+    else if (talla === "S" || talla === "XS") {
+      tipoTallaTexto = "Pequeña";
+    }
+    else {
+      tipoTallaTexto = "Talla no identificada";
+    }
+
+    return tipoTallaTexto;
+  }
+ 
+  function main() {
+    let talla = document.getElementById("talla").value;
+
+    document.getElementById("demo").innerHTML = tipoTalla(talla);
+  }
+</script>
+</body>
+</html>

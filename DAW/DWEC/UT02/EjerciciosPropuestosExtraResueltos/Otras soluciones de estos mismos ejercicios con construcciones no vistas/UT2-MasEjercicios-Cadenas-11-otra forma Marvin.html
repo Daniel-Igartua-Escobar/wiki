@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Propuesto</title>
+</head>
+<body>
+
+<fieldset>
+    <legend>Estrellas impares</legend>
+
+    <label id="num" for="numIntro">Escribe un Número</label>
+    <input type="text" id="numIntro" placeholder="Escribe un Valor"/><br/>
+
+
+    <p id="resultadoCalculado"></p>
+    <button id="estrella" onclick="estrella();">Mostrar Estrellas</button>
+
+</fieldset>
+
+
+<script>
+    // 11. Solicite un número impar usuario y muestre una plantilla similar a la siguiente (para el número 9)
+
+    function estrella() {
+
+        document.getElementById("resultadoCalculado").innerText  = "";
+
+        if(!(parseInt(document.getElementById("numIntro").value) %2 == 0)) {
+
+            var num = parseInt(document.getElementById("numIntro").value);
+
+
+            for(var x = 1; x <= num +2; x += 2) {
+                document.getElementById("resultadoCalculado").innerText += "*";
+                for(var y = 3; y <= num; y += 2) {
+                    if(y <= x) {
+                        document.getElementById("resultadoCalculado").innerText += "**";
+                    }
+                }
+                document.getElementById("resultadoCalculado").innerHTML += "<br/>";
+            }
+
+            for(var x = (num -2); x >= 0; x -= 2) {
+                document.getElementById("resultadoCalculado").innerText += "*";
+                for(var y = (num -2); y >= 0; y -= 2) {
+                    if(y < x) {
+                        document.getElementById("resultadoCalculado").innerText += "**";
+                    }
+                }
+                document.getElementById("resultadoCalculado").innerHTML += "<br/>";
+            }
+
+
+
+        }else {
+            alert("Número no es impar !");
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Números 4</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Número 1
+    <input type="text" name="num1" id="num1" value="1">
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function main() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+
+    var texto = (num1 % 2 == 0) ? num1 + " es par" : num1 + " es impar";
+
+    document.getElementById("demo").innerHTML = texto;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Números 9</title>
+</head>
+<body>
+  <p id="demo">Holis</p>
+
+<script>
+
+  // Media aritmética simplificada
+  var num = 0;
+
+  var media = 0;
+  var contador = 0;
+
+  while (num >= 0) {
+    num = parseFloat(prompt("Introduzca un número\n\n(Número negativo para finalizar)"));
+
+    if (num >= 0) {
+      media += num;
+      contador++;
+    }
+  }
+
+  media /= contador;
+
+  document.getElementById("demo").innerHTML = "Media aritmética: " + media;
+</script>
+</body>
+</html>

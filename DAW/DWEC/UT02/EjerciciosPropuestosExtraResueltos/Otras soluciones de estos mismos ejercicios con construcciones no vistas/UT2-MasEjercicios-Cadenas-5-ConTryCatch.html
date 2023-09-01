@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Cadenas de caracteres 5</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Número palabras
+    <input type="text" name="num" id="num" value="1">
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function main() {
+    let num = parseInt(document.getElementById("num").value);
+
+    if (num < 0) {
+      document.getElementById("demo").innerHTML = "Introduce un número positivo";
+    }
+    else {
+      let contador = 0;
+
+      let palabraMasCorta, palabraMasLarga, palabra;
+
+      while (contador !== num) {
+        palabra = prompt("Introduce una palabra");
+
+        try {
+          if (palabra.length < palabraMasCorta.length) {
+            palabraMasCorta = palabra;
+          }
+        } catch (TypeError) {
+          palabraMasCorta = palabra;
+        }
+
+        try {
+          if (palabra.length > palabraMasLarga.length) {
+            palabraMasLarga = palabra;
+          }
+        } catch (TypeError) {
+          palabraMasLarga = palabra;
+        }
+
+        contador++;
+      }
+
+      document.getElementById("demo").innerHTML = `Palabra más corta: ${palabraMasCorta}<br>Palabra más larga: ${palabraMasLarga}`;
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Propuesto</title>
+</head>
+<body>
+
+
+<fieldset>
+    <legend>Tallas y Tamaños</legend>
+
+    <label id="num" for="numIntro">Escribe un Número</label>
+    <input type="text" id="numIntro" placeholder="Escribe un Valor"/><br/>
+
+
+    <p id="resultadoCalculado"></p>
+    <button id="calcTam" onclick="calTam();">Mostrar Tamaño</button>
+
+</fieldset>
+
+
+    <script>
+        // 23. Solicite una talla de ropa e indique su tamaño según la siguiente tabla
+        // XXL, XL, L Grande
+        // M Mediana
+        // XS, S Pequeña
+
+        function calTam() {
+
+            document.getElementById("resultadoCalculado").innerText = "";
+
+            var talla = parseInt(document.getElementById("numIntro").value);
+
+            switch (talla) {
+                case 56 :
+                    document.getElementById("resultadoCalculado").innerText = "XXL de la Categoría : Grande";
+                    break;
+                case 54 :
+                    document.getElementById("resultadoCalculado").innerText = "XL de la Categoría : Grande";
+                    break;
+                case 52 :
+                    document.getElementById("resultadoCalculado").innerText = "L de la Categoría : Grande";
+                    break;
+                case 50 :
+                    document.getElementById("resultadoCalculado").innerText = "M de la Categoría : Mediana";
+                    break;
+                case 48 :
+                    document.getElementById("resultadoCalculado").innerText = "S de la Categoría : Pequeña";
+                    break;
+                case 46 :
+                    document.getElementById("resultadoCalculado").innerText = "XS de la Categoría : Pequeña";
+                    break;
+                default :
+                    document.getElementById("resultadoCalculado").innerText = "No es un Número adecuado";
+                    break;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Cadenas de caracteres 10</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Número
+    <input type="text" name="num" id="num" value="1">
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo" style="font-family: monospace;">Holis</p>
+
+<script>
+  function asteriscos(num) {
+    let cadena = "";
+
+    for (let i = 0; i < num; i++) {
+      cadena += "*";
+    }
+
+    return cadena;
+  }
+
+  function serieNumeros(num) {
+    let cadena = "";
+
+    for (let i = 1; i <= num; i++) {
+      cadena += i;
+    }
+
+    return cadena;
+  }
+
+  function main() {
+    let num = parseInt(document.getElementById("num").value);
+
+    let texto = "";
+
+    let maxLength = serieNumeros(num).length;
+
+    let serieNumerosFila;
+
+    for (let i = 1; i <= num; i++) {
+      serieNumerosFila = serieNumeros(i);
+      texto += `${serieNumerosFila}${asteriscos(maxLength - serieNumerosFila.length)}<br>`;
+    }
+
+    document.getElementById("demo").innerHTML = texto;
+  }
+</script>
+</body>
+</html>

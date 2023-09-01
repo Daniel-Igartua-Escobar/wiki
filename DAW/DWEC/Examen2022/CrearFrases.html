@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrearFrases</title>
+    <script src="CrearFrases.js" defer></script>
+</head>
+<body>
+    <h1>Frases para Galletas de la suerte</h1>
+
+    <textarea id="nuevaFrase" rows="4" cols="50" placeholder="Escribe una frase"></textarea>
+
+    <button onclick="añadirFrase()">Añadir frase</button>
+
+    <ul id="listaFrases"></ul>
+
+    <button onclick="resumen()">Resumen</button>
+    <button onclick="cambiarArray()">Cambiar Array</button>
+    <button onclick="verArray()">Ver Array</button>
+    <button onclick="verArray()">Imprimir Array</button>
+
+    <ul id="listaFrasesArray"></ul>
+    
+    <form id="myForm">
+        <div>
+            <label for="nombre">¿Para quién?:</label>
+            <input type="text" id="nombre" name="usuario_nombre" required autofocus>  
+        </div>
+        <div>
+            <label for="color">Color de la letra:</label>
+            <input type="color" id="color" name="usuario_color" required>
+        </div>
+        <div>
+            <label for="tamaño">Tamaño de la letra:</label>
+            <input type="number" id="tamaño" name="usuario_tamaño" value="20" min="20" required>     
+        </div>
+
+        <label>Escoge:</label><br>
+        <input type="checkbox" name="cursisva">Cursisva<br>
+        <input type="checkbox" name="negrita">Negrita<br>
+
+        <fieldset>
+            <legend>Uso de mayusculas:</legend>
+            <div>
+                <input type="radio" id="mayusculas" name="usuario_letra" value="mayusculas">
+                <label for="mayusculas">Mayusculas</label>
+            </div>
+            <div>
+                <input type="radio" id="titulo" name="usuario_letra" value="titulo" checked>
+                <label for="titulo">Tipo titulo</label>
+            </div>
+          </fieldset>
+          <input type="submit" value="abrir ventana"></button>
+    </form>
+</body>
+</html>

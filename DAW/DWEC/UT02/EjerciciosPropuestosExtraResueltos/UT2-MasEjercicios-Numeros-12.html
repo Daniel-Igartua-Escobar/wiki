@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Números 12</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Número 1
+    <input type="text" name="num1" id="num1" value="1">
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function main() {
+    let num1 = parseInt(document.getElementById("num1").value);
+
+    if (num1 <= 0) {
+      document.getElementById("demo").innerHTML = "Introduce un número natural mayor a 0";
+    }
+    else {
+      let sum = 0;
+
+      for (let i = 1; i <= num1; i++) {
+        sum += i;
+      }
+
+      document.getElementById("demo").innerHTML = sum;
+    }
+  }
+</script>
+</body>
+</html>

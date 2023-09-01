@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Números 44</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Segundos
+    <input type="text" name="segundos" id="segundos" value="1">
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function convertirSegundos(segundos) {
+    let minutos = parseInt(segundos / 60); // Me quedo con la parte entera
+    segundos -= minutos * 60;
+
+    let horas = parseInt(minutos / 60); // Me quedo con la parte entera
+    minutos -= horas * 60;
+
+    return "Horas: " + horas + "<br>Minutos: " + minutos + "<br>Segundos: " + segundos;
+  }
+
+  function main() {
+    let segundos = parseInt(document.getElementById("segundos").value);
+
+    document.getElementById("demo").innerHTML = convertirSegundos(segundos);
+  }
+</script>
+</body>
+</html>

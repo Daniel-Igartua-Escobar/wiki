@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #CCCCCC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        table {
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        caption{
+            border: 1px solid black;
+            border-bottom: 0;
+            background-color: rgba(150, 162, 212, 0.4);
+            font-weight: bold;
+        }
+
+        thead {
+            background-color: rgba(150, 212, 164, 0.4);
+        }
+
+        tbody {
+            background-color: rgba(212, 187, 150, 0.4);
+        }
+
+        a {
+            padding: 20px;
+            color: white;
+        }
+
+        form {
+            background-color: rgba(150, 162, 212, 0.4);
+            display: table-caption;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            border: 2px solid;
+        }
+
+        .checkbox-terminos {
+            padding: 20px;
+        }
+
+        .boton-enviar {
+            margin: 0 0 20px 0;
+        }
+    </style>
+    <header>
+        <nav>
+            <a href="https://www.educa2.madrid.org/web/centro.ies.lapaz.alcobendas" target="_blank">Viregen de la Paz</a>
+            <a href="https://www.educa2.madrid.org/educamadrid/" target="_blank">Educamadrid</a>
+        </nav>
+    </header>
+    <main>
+        <table>
+            <caption>Alumnos matriculados por grupo</caption>
+            <thead>
+                <tr>
+                    <th>Grupo</th>
+                    <th>Numero de alumnos</th>
+                    <th>Fecha de examen</th>
+                    </tr>
+            </thead>
+            <tbody>        
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td rowspan="2">Total 175</td>
+                    </tr>
+                    <tr>
+                    <td>76</td>
+                    <td>79</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">5-6-2023</td>
+                        <td></td>
+                    </tr>
+            </tbody>
+        </table>
+
+        <form action="/mi_servidor.php">
+            <h2>Create una cuenta</h2>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" size="35" required>
+            <input type="text" name="Telefono" id="Telefono" placeholder="Telefono" size="35" required>
+            <input type="text" name="Email" id="Email" placeholder="Email" size="35" required>
+            <input type="text" name="Contraseña" id="Contraseña" placeholder="Contraseña" size="35" required>
+            <div class="checkbox-terminos">
+                <input type="checkbox" name="terminosAceptados" required><span>Acepto los Terminos y condiciones</span>
+            </div>
+
+            <input class="boton-enviar" type="submit" value="Crear">
+        </form>
+    </main>
+</body> 
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Números 6</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>Números </label><input type="text" name="num1" placeholder="Introduce números separados por comas" id="num1" size="40">
+  
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function main() {
+    var numeros = document.getElementById("num1").value.split(",");
+    var mayor=numeros[0];
+    for (let i = 1; i < numeros.length; i++) {
+      if (numeros[i]>mayor) mayor=numeros[i];
+    }
+
+    document.getElementById("demo").innerHTML = mayor;
+  }
+</script>
+</body>
+</html>

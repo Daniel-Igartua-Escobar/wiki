@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Cadenas de caracteres 4</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Palabra 1
+    <input type="text" name="palabra1" id="palabra1" value="a">
+  </label>
+  <br>
+  <label>
+    Palabra 2
+    <input type="text" name="palabra2" id="palabra2" value="a">
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function main() {
+    let palabra1 = document.getElementById("palabra1").value;
+    let palabra2 = document.getElementById("palabra2").value;
+
+    if (palabra1.length > palabra2.length) {
+      document.getElementById("demo").innerHTML = palabra1 + "tiene más longitud que " + palabra2 + ". Diferencia: " + (palabra1.length - palabra2.length);
+    }
+    else if (palabra1.length < palabra2.length) {
+      document.getElementById("demo").innerHTML = palabra2 + "tiene más longitud que " + palabra1 + ". Diferencia: " + (palabra2.length - palabra1.length);
+    }
+    else {
+      document.getElementById("demo").innerHTML = "Las 2 palabras tienen la misma longitud";
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Saludo</title>
+  </head>
+  <body>
+    <script>
+
+    var n1 = prompt("Escribe un número");
+    var numero1=parseInt(n1);
+    var n2 = prompt("Escribe otro número");
+    var numero2=parseInt(n2);
+
+    var mayor;
+    var i;
+
+      if (numero1 > numero2) {
+          mayor = numero1;
+          } else {
+          mayor = numero2;
+        }
+
+      for (i=1; i <= mayor; i++) {
+      if (numero1 % i === 0 && numero2 % i === 0) {
+      document.write(i,", ");
+
+}
+}
+    </script>
+  </body>
+</html>

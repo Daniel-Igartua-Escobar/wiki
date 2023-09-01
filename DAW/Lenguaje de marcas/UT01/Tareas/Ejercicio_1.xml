@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE agenda>
+<agenda>
+    <nombre>PACO</nombre>
+    <apellidos>GARCIA NOBLEJAS</apeliidos>
+    <direccion>
+        <calle>reina victoria</calle>
+        <numero>32</numero>
+        <poblacion>madrid</poblacion>
+        <codigo_postal>28043</codigo_postal>
+    </direccion>
+    <telefonos>
+        <casa>915463245</casa>
+        <movil>645345123</movil>
+        <trabajo>678432563</trabajo>
+    </telefonos>
+</agenda>

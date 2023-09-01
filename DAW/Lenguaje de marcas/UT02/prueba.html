@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 3. Tarea 2</title>
+<style type="text/css">
+body {
+background-color: rgb(215, 226, 250);
+color: rgb(94, 91, 91);
+font-size: 120%;
+line-height: 1.5em;
+}
+form {
+border: 3px solid rgb(68, 71, 70);
+width: 400px;
+margin: 0 auto;
+/* Centramos el formulario en el body*/
+padding: 30px;
+}
+
+.cabecera {
+background-color: rgb(153, 166, 177);
+padding: 20px;
+border-radius: 5px;
+text-align: center;
+}
+/* Clase para poner los botones */
+.botones {
+border-radius: 5px;
+background-color: rgb(68, 71, 70);
+text-align: center;
+
+}
+label {
+font-weight: 800;
+}
+</style>
+</head>
+<body>
+    <form action="mailto:mihotel.com" method="post">
+    
+    <h3 class="cabecera">Mi Hotel reservas on line</h3>
+    
+    <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" size="50"
+    required>
+    <br>
+    
+    <input type="text" name="Apellidos" id="Apellidos" placeholder="Apellidos"
+    size="50" required>
+    <br>
+    
+    <input type="tel" name="Telefono" id="Telefono" placeholder="Teléfono" size="50"
+    required>
+    <br>
+    
+    <input type="email" name="Email" id="Email" placeholder="Correo Electrónico"
+    size="50" required></input>
+    <br>
+    
+    <input type="text" name="Noches" id="Noches" placeholder="Número de noches "
+    size="50" required>
+    <br>
+<label>Fecha de llegada:</label><br>
+<input type="date" name="fecha-llegada" id="fecha-llegada" required><br>
+<label>Fecha de Salida: </label><br>
+<input type="date" name="fecha-salida" id="fecha-salida" required>
+<br>
+<label>Habitación: </label><br>
+<input type="radio" name="tipo" value="simple">Simple<br>
+<input type="radio" name="tipo" value="doble">Doble<br>
+<input type="radio" name="tipo" value="matrimonio" selected>Matrimonio
+<br>
+<label> Tipo de Cama </label>
+<select name="Cama" id="Cama">
+<option value="doble">Doble</option>
+<option value="individual"> Individuales</option>
+</select>
+<br>
+<label>Escoge:</label><br>
+<input type="checkbox" name="desayuno">Desayuno<br>
+<input type="checkbox" name="comida">Comida<br>
+<input type="checkbox" name="cena">Cena<br>
+
+<br>
+
+<label>Comentarios:</label><br>
+<textarea rows="5" cols="50"></textarea>
+<br>
+<div class="botones">
+<input type="submit" name="Enviar" value="Enviar Datos">
+<input type="reset" name="Reset" value="Limpiar">
+</div>
+</form>
+</body>

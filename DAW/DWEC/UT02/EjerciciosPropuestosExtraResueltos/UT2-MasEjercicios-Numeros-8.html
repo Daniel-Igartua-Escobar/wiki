@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT2 Más ejercicios - Números 8</title>
+</head>
+<body>
+  <h1>Datos</h1>
+  <label>
+    Número 1
+    <input type="text" name="num1" id="num1" value="1">
+  </label>
+  <br>
+  <label>
+    Número 2
+    <input type="text" name="num2" id="num2" value="1">
+  </label>
+  <br>
+  <label>
+    Número 3
+    <input type="text" name="num3" id="num3" value="1">
+  </label>
+  <br>
+  <label>
+    Número 4
+    <input type="text" name="num4" id="num4" value="1">
+  </label>
+  <br>
+  <button onclick="main()">Púlsame</button>
+
+  <p id="demo">Holis</p>
+
+<script>
+  function ordenarNumArray(numArray) {
+    for (let i = 0; i < numArray.length - 1; i++) {
+      for (let j = i + 1; j < numArray.length; j++) {
+        if (numArray[i] > numArray[j]) {
+
+          let tmp = numArray[i];
+          numArray[i] = numArray[j];
+
+          numArray[j] = tmp;
+        }
+      }
+    }
+
+    return numArray;
+  }
+
+  function main() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+    var num3 = parseFloat(document.getElementById("num3").value);
+    var num4 = parseFloat(document.getElementById("num4").value);
+
+    var numArray = [num1, num2, num3, num4];
+
+    document.getElementById("demo").innerHTML = ordenarNumArray(numArray);
+  }
+</script>
+</body>
+</html>

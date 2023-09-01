@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo</title>
+</head>
+
+<body>
+    <script>
+        var v1 = null;
+        v1 = window.open("", "Nueva ventana DWEC03");
+        var dia = Math.round(Math.random() * 27) + 1;
+        //Math.round(Math.random()*27) devuelve entre 0 y 27, luego le sumamos1 al número aleatorio obtenido.
+        var mes = Math.round(Math.random() * 11) + 1
+        var anio = Math.round(Math.random() * 19) + 1980
+        var fecha = new Date(anio, mes, dia);
+        var hoy = new Date();
+        var dias = new Array("Domingo", "Lunes", "Martes", "Miércoles",
+            "Jueves",
+            "Viernes", "Sabado");
+        console.log(dia, mes, anio)
+        var nombre = "Luis Jimenez Martin";
+        v1.document.write("La fecha es: ", fecha.toLocaleDateString(), "<br>");
+        v1.document.write("El dia de la semana de la fecha es: ", dias[fecha.getDay()], "<br>");
+        edad = Math.floor((hoy.getTime() -
+            fecha.getTime()) / (60 * 60 * 1000 * 24 * 365))
+        v1.document.write("La edad es: ", edad, "<br>");
+        v1.document.write("La URL completa de la nueva ventana es: ",
+            v1.location.href, "<br>");
+        v1.document.write("El protocolo que utiliza la nueva ventana es: ",
+            v1.location.protocol, "<br>");
+        v1.document.write("El código del navegador de la nueva ventana es: ", v1.navigator.appName, "<br>");
+        var javaactivado = v1.navigator.javaEnabled() ? "SÍ" : "NO";
+        v1.document.write("Java " + javaactivado + " está disponible en esta ventana<br/>");
+        v1.document.write("El nombre y apellidos en mayúsculas:", nombre.toUpperCase(), "<br>");
+        v1.document.write("La primera e del nombre está en la posicion:", nombre.indexOf("e"), "<br>");
+        v1.document.write("La última e del nombre está en la posicion:", nombre.lastIndexOf("e"), "<br>");
+        v1.document.write("La cadena del nombre comprendida entre lasposiciones 4 y 12 es: //", nombre.substring(4, 12), "//<br>");
+        v1.document.write("El menor número entre (20,6,14,89,33) es:", Math.min(20, 6, 14, 89, 33), "<br>");
+    </script>
+</body>
+
+</html>
